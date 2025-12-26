@@ -329,14 +329,13 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "9a463ad9-0f9d-46d7-8b67-85eb738148eb",
+										"type": "text/javascript",
 										"exec": [
 											"// 1. Generate Random Name",
-											"const _ = require('lodash');",
 											"const name = \"{{$randomFullName}}\";",
 											"",
 											"// 2. Generate Random Email",
-											"const email = \"{{$randonEmail}}\"",
+											"const email = \"{{$randomEmail}}\"",
 											"",
 											"// 3. Generate Random Password",
 											"const password = _.sampleSize('abcdefghijklmnopqrstuvwxyz0123456789', 4).join('');",
@@ -347,15 +346,14 @@
 											"// 5. Generate NID (Within 13 characters)",
 											"const nid = _.times(13, () => _.random(0, 9)).join('');",
 											"",
+											"// 6. Define role for this request",
+											"const role = \"Merchant\";",
+											"",
 											"// 7. Save Phone Number to local variables for further tests",
 											"pm.variables.set(\"random_phone\", phoneNumber);",
 											"pm.variables.set(\"random_role\", role);",
-											"",
 											""
-										],
-										"type": "text/javascript",
-										"packages": {},
-										"requests": {}
+										]
 									}
 								}
 							],
