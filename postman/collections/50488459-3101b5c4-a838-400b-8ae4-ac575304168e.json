@@ -373,7 +373,36 @@
 							"response": []
 						}
 					],
-					"id": "50488459-e4f19f25-7ae6-4751-93d6-dc19521b7d60"
+					"id": "50488459-e4f19f25-7ae6-4751-93d6-dc19521b7d60",
+					"auth": {
+						"type": "bearer"
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "bc0b3d98-e8eb-46e1-a3d5-5e2d95e9a2e8",
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {},
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "2e2cba2f-cf05-4286-bf2f-aef4889318b6",
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {},
+								"exec": [
+									""
+								]
+							}
+						}
+					]
 				},
 				{
 					"name": "Negative Scenarios",
