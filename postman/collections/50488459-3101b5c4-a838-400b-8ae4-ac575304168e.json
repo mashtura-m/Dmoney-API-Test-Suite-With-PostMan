@@ -224,7 +224,7 @@
 											"// 3. Password is set at folder level (02. User Onboarding)",
 											"",
 											"// 4. Generate 11-Digit Phone Number (Starts with 01, then 9 random digits)",
-											"const phoneNumber = \"01\" + pm.variables.replaceIn(\"{{$randomInt}}\").toString().padStart(9, '0').slice(0, 9);",
+											"const phoneNumber = \"09\" + pm.variables.replaceIn(\"{{$randomInt}}\").toString().padStart(9, '0').slice(0, 9);",
 											"",
 											"// 5. Generate NID (13 digits)",
 											"const nid = pm.variables.replaceIn(\"{{$randomInt}}\").toString().padStart(7, '0').slice(0, 7) + pm.variables.replaceIn(\"{{$randomInt}}\").toString().padStart(6, '0').slice(0, 6);",
