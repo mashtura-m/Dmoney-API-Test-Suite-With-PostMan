@@ -396,20 +396,13 @@
 					],
 					"id": "50488459-e4f19f25-7ae6-4751-93d6-dc19521b7d60",
 					"auth": {
-						"type": "bearer",
-						"bearer": [
-							{
-								"key": "token",
-								"value": "",
-								"type": "string"
-							}
-						]
+						"type": "noauth"
 					},
 					"event": [
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "6af78252-388d-4ac0-82e3-726da4276923",
+								"id": "4c96c307-f6c4-4dc9-8a3f-bc3ad4fe8b1f",
 								"type": "text/javascript",
 								"packages": {},
 								"requests": {},
@@ -421,7 +414,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "9d12d533-41c3-4cfd-a45a-d5c9d6eba967",
+								"id": "6821dbbe-c453-4404-9ff3-a1830b2f264a",
 								"type": "text/javascript",
 								"packages": {},
 								"requests": {},
