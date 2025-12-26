@@ -440,12 +440,11 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "acd2e6f3-c944-48f4-934a-4d805d8cc182",
 						"type": "text/javascript",
-						"packages": {},
-						"requests": {},
 						"exec": [
-							""
+							"// Shared password for all user onboarding requests",
+							"const password = \"MMM1234\";",
+							"pm.variables.set(\"password\", password);"
 						]
 					}
 				},
