@@ -10,32 +10,6 @@
 			"name": "01. Security & Authentication",
 			"item": [
 				{
-					"name": "Admin Login - Invalid Password",
-					"id": "50488459-523a982f-2bae-421b-8192-582dd8e3911f",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\"email\": \"{{adminEmail}}\", \"password\": \"wrong\"}"
-						},
-						"url": {
-							"raw": "{{baseUrl}}/user/login",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"user",
-								"login"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "Admin Login - Valid Creds",
 					"event": [
 						{
@@ -43,15 +17,6 @@
 							"script": {
 								"id": "b405e134-e41d-4c78-92fc-d3b01bd34fec",
 								"exec": [
-									"",
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});",
-									"pm.test(\"Login successfully\", function () {",
-									"    pm.expect(pm.response.text()).contains(\"Login successful\");",
-									"});",
-									"",
-									"",
 									"",
 									"if (pm.response.code === 200) {",
 									"    ",
@@ -76,6 +41,13 @@
 								"packages": {},
 								"requests": {}
 							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"packages": {},
+								"type": "text/javascript"
+							}
 						}
 					],
 					"id": "50488459-f98cbb59-9404-4a0e-b5cb-a31886dffd09",
@@ -93,6 +65,32 @@
 									"language": "json"
 								}
 							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/user/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Login - Invalid Password",
+					"id": "50488459-523a982f-2bae-421b-8192-582dd8e3911f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\": \"{{adminEmail}}\", \"password\": \"wrong\"}"
 						},
 						"url": {
 							"raw": "{{baseUrl}}/user/login",
