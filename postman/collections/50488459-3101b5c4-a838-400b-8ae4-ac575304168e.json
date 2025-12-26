@@ -526,19 +526,37 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "f2936d92-5ae0-4317-a9b2-5cdbae65b786",
+						"id": "f3f0ee97-df39-4776-ba7b-39d669612384",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
 						"exec": [
-							""
+							"const authToken = pm.variables.get(\"Agent-auth-token\");",
+							"const secretKey = pm.variables.get(\"secret-key\");",
+							"",
+							"// 2. Check if keys exist, then inject them into the header",
+							"if (authToken) {",
+							"    // Note: Adjust \"Authorization\" to \"auth-token\" if your API uses that specific header key",
+							"    pm.request.headers.add({",
+							"        key: 'Authorization',",
+							"        value: `Bearer ${authToken}` // Common standard. Remove 'Bearer ' if your API just sends the raw token.",
+							"    });",
+							"}",
+							"",
+							"if (secretKey) {",
+							"    pm.request.headers.add({",
+							"        key: 'X-AUTH-SECRET-KEY',",
+							"        value: secretKey",
+							"    });",
+							"}",
+							"console.log('Headers injected via Collection Script ${authToken}');"
 						]
 					}
 				},
 				{
 					"listen": "test",
 					"script": {
-						"id": "76c316fd-bf2c-4269-9705-a19beb4a7295",
+						"id": "3f6bfed4-3dff-479b-af35-4200b8d94437",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
