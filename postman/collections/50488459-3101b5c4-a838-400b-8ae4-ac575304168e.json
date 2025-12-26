@@ -218,29 +218,7 @@
 									"script": {
 										"id": "8e026faf-a94b-42f6-952c-6243532ae5aa",
 										"exec": [
-											"// 1. Generate Random Name using Postman dynamic variable",
-											"const name = pm.variables.replaceIn(\"{{$randomFullName}}\");",
-											"",
-											"// 2. Generate Random Email using Postman dynamic variable",
-											"const email = pm.variables.replaceIn(\"{{$randomEmail}}\");",
-											"",
-											"// 3. Password is set at folder level (02. User Onboarding)",
-											"",
-											"// 4. Generate 11-Digit Phone Number (Starts with 01, then 9 random digits)",
-											"const phoneNumber = \"09\" + pm.variables.replaceIn(\"{{$randomInt}}\").toString().padStart(9, '0').slice(0, 9);",
-											"",
-											"// 5. Generate NID (13 digits)",
-											"const nid = pm.variables.replaceIn(\"{{$randomInt}}\").toString().padStart(7, '0').slice(0, 7) + pm.variables.replaceIn(\"{{$randomInt}}\").toString().padStart(6, '0').slice(0, 6);",
-											"",
-											"// 6. Define role for this request",
-											"const role = \"Customer\";",
-											"// 7. Save values to variables used in the request body",
-											"pm.variables.set(\"name\", name);",
-											"pm.variables.set(\"email\", email);",
-											"pm.variables.set(\"password\", password);",
-											"pm.variables.set(\"phone_number\", phoneNumber);",
-											"pm.variables.set(\"nid\", nid);",
-											"pm.variables.set(\"role\", role);"
+											""
 										],
 										"type": "text/javascript",
 										"packages": {},
@@ -257,7 +235,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"name\": \"{{name}}\",\n  \"email\": \"{{email}}\",\n  \"password\": \"{{password}}\",\n  \"phone_number\": \"{{phone_number}}\",\n  \"nid\": \"{{nid}}\",\n  \"role\": \"Customer\"\n}"
+									"raw": "{\n  \"name\": \"{{name}}\",\n  \"email\": \"{{email}}\",\n  \"password\": \"{{user-password}}\",\n  \"phone_number\": \"{{phone_number}}\",\n  \"nid\": \"{{nid}}\",\n  \"role\": \"Customer\"\n}"
 								},
 								"url": {
 									"raw": "{{baseUrl}}/user/create",
