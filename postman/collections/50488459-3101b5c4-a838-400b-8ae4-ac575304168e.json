@@ -478,7 +478,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "84e898f5-8f32-4743-a048-53fde2319187",
+						"id": "4087ad82-02fe-4f60-a733-9295b5f8d3e6",
 						"type": "text/javascript",
 						"requests": {},
 						"exec": [
@@ -504,14 +504,15 @@
 							"        key: 'X-AUTH-SECRET-KEY',",
 							"        value: secretKey",
 							"    });",
-							"}"
+							"}",
+							"console.log(\"Headers injected via Collection Script\");"
 						]
 					}
 				},
 				{
 					"listen": "test",
 					"script": {
-						"id": "3d0baa45-7d7f-4846-b7d1-765b61e21c04",
+						"id": "851c5b12-3c77-49e2-94a5-3878a1b4ddf4",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
