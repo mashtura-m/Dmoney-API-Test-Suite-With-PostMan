@@ -35,7 +35,14 @@
 									"",
 									"} else {",
 									"    console.log(\"Login failed. Status code: \" + pm.response.code);",
-									"}"
+									"}",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Login successfully\", function () {",
+									"    pm.expect(pm.response.text()).contains(\"Login successful\");",
+									"});",
+									""
 								],
 								"type": "text/javascript",
 								"packages": {},
@@ -45,8 +52,13 @@
 						{
 							"listen": "prerequest",
 							"script": {
+								"id": "7d68d4b7-8b68-4b4e-9da1-6a2c1500023e",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
 								"packages": {},
-								"type": "text/javascript"
+								"requests": {}
 							}
 						}
 					],
