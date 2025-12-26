@@ -357,7 +357,14 @@
 											"const nid = pm.variables.replaceIn(\"{{$randomInt}}\").toString().padStart(7, '0').slice(0, 7) + pm.variables.replaceIn(\"{{$randomInt}}\").toString().padStart(6, '0').slice(0, 6);",
 											"",
 											"// 6. Define role for this request",
-											"const role = \"Customer\";"
+											"const role = \"Merchant\";",
+											"// 7. Save values to variables used in the request body",
+											"pm.variables.set(\"name\", name);",
+											"pm.variables.set(\"email\", email);",
+											"pm.variables.set(\"password\", password);",
+											"pm.variables.set(\"phone_number\", phoneNumber);",
+											"pm.variables.set(\"nid\", nid);",
+											"pm.variables.set(\"role\", role);"
 										],
 										"type": "text/javascript",
 										"packages": {},
