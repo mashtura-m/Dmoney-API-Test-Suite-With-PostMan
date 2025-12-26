@@ -638,6 +638,10 @@
 		{
 			"key": "pswd",
 			"value": ""
+		},
+		{
+			"key": "Admin-auth-token",
+			"value": ""
 		}
 	]
 }
