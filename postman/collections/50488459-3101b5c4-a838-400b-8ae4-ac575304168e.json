@@ -272,7 +272,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"type": "text/javascript",
+										"id": "81adcc0c-e876-4bbb-88a4-b5f356c80f9c",
 										"exec": [
 											"// 1. Generate Random Name using Postman dynamic variable",
 											"const name = pm.variables.replaceIn(\"{{$randomFullName}}\");",
@@ -280,7 +280,6 @@
 											"// 2. Generate Random Email using Postman dynamic variable",
 											"const email = pm.variables.replaceIn(\"{{$randomEmail}}\");",
 											"",
-											"// 3. Password is set at folder level (02. User Onboarding)",
 											"",
 											"// 4. Generate 11-Digit Phone Number (Starts with 01, then 9 random digits)",
 											"const phoneNumber = \"01\" + pm.variables.replaceIn(\"{{$randomInt}}\").toString().padStart(9, '0').slice(0, 9);",
@@ -289,14 +288,11 @@
 											"const nid = pm.variables.replaceIn(\"{{$randomInt}}\").toString().padStart(7, '0').slice(0, 7) + pm.variables.replaceIn(\"{{$randomInt}}\").toString().padStart(6, '0').slice(0, 6);",
 											"",
 											"// 6. Define role for this request",
-											"const role = \"Customer\";",
-											"",
-											"// Set variables for use in request body",
-											"pm.variables.set(\"name\", name);",
-											"pm.variables.set(\"email\", email);",
-											"pm.variables.set(\"phone_number\", phoneNumber);",
-											"pm.variables.set(\"nid\", nid);"
-										]
+											"const role = \"Customer\";"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
