@@ -433,7 +433,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"from_account\": \"SYSTEM\",\n  \"to_account\": \"01774390346\",\n  \"amount\": 2000\n}",
+							"raw": "{\n  \"from_account\": \"SYSTEM\",\n  \"to_account\": \"06039910726\",\n  \"amount\": 10000\n}",
 							"options": {
 								"raw": {
 									"language": "json"
