@@ -160,7 +160,6 @@
 											"const email = pm.variables.replaceIn(\"{{$randomEmail}}\");",
 											"",
 											"// 2. Generate Random 11-Digit Phone Number (Starts with 01)",
-											"// We use Math.random to get a full 9-digit random string, ensuring uniqueness",
 											"const randomPart = Math.floor(100000000 + Math.random() * 900000000); ",
 											"const phoneNumber = \"01\" + randomPart;",
 											"",
