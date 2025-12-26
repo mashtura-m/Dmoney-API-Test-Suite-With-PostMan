@@ -192,7 +192,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"name\": \"{{name}}\",\n  \"email\": \"{{email}}\",\n  \"password\": \"{{password}}\",\n  \"phone_number\": \"{{phone_number}}\",\n  \"nid\": \"{{nid}}\",\n  \"role\": \"Agent\"\n}"
+									"raw": "{\n  \"name\": \"{{name}}\",\n  \"email\": \"{{email}}\",\n  \"password\": \"{{password}}\",\n  \"phone_number\": \"{{phone_number}}\",\n  \"nid\": \"{{nid}}\",\n  \"role\": \"{{role}}\"\n}"
 								},
 								"url": {
 									"raw": "{{baseUrl}}/user/create",
