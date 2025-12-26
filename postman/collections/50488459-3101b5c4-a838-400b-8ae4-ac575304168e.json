@@ -550,7 +550,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "eb5ec715-36fa-4117-9093-fe0893ad7ec8",
+				"id": "1b0273b3-233c-413b-b885-67fdf1910998",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
@@ -566,7 +566,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "d9f0f4ad-81b9-4d0b-90dd-fe82ff101ab4",
+				"id": "5938940d-cc42-4423-9ba5-dcddefa806c6",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
@@ -583,10 +583,6 @@
 		},
 		{
 			"key": "adminEmail",
-			"value": ""
-		},
-		{
-			"key": "adminPassword",
 			"value": ""
 		},
 		{
