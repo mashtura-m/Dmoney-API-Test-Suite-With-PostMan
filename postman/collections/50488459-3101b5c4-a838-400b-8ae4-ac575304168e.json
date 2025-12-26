@@ -755,8 +755,21 @@
 			"description": "Balance checks and transaction history."
 		},
 		{
-			"name": "New Folder",
-			"item": [],
+			"name": "Search Data",
+			"item": [
+				{
+					"name": "New Request",
+					"id": "50488459-e1caf693-82ee-445f-ab87-7a6a658214c8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
 			"id": "50488459-5b734fdd-4fc6-4ace-a51c-cf6aaeac0c78"
 		}
 	],
