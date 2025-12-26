@@ -441,40 +441,19 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "c269aac9-5d49-430c-ab24-ef2e7ab3d031",
+						"id": "b7e38afb-a8aa-4c14-ae32-398b4729b4c5",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
 						"exec": [
-							"// 1. Generate Random Name",
-							"const name = `User_${_.random(1000, 9999)}`;",
-							"",
-							"// 2. Generate Random Email",
-							"const email = `${_.toLower(name)}@example.com`;",
-							"",
-							"// 3. Generate Random Password",
-							"const password = _.sampleSize('abcdefghijklmnopqrstuvwxyz0123456789', 4).join('');",
-							"",
-							"// 4. Generate 11-Digit Phone Number (Starts with 01, then 9 random digits)",
-							"const phoneNumber = \"01\" + _.times(9, () => _.random(0, 9)).join('');",
-							"",
-							"// 5. Generate NID (Within 13 characters)",
-							"const nid = _.times(13, () => _.random(0, 9)).join('');",
-							"",
-							"// 6. Select Random Role (Admin, Customer, or Merchant)",
-							"const roles = [\"Admin\", \"Customer\", \"Merchant\"];",
-							"const role = _.sample(roles);",
-							"",
-							"// 7. Save Phone Number to local variables for further tests",
-							"pm.variables.set(\"random_phone\", phoneNumber);",
-							"pm.variables.set(\"random_role\", role);"
+							""
 						]
 					}
 				},
 				{
 					"listen": "test",
 					"script": {
-						"id": "abfeb575-405b-46e2-be40-9be29e0fb8d9",
+						"id": "0967524f-12c3-462f-a142-d6613d398f93",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
