@@ -428,11 +428,16 @@
 			],
 			"id": "50488459-c723f8de-51b0-4542-a005-24503b40438a",
 			"description": "Admin creating Agent, Customers, and Merchant.",
+			"auth": {
+				"type": "bearer"
+			},
 			"event": [
 				{
 					"listen": "prerequest",
 					"script": {
+						"id": "f1a3a758-4f80-4305-80ef-87486e3421d7",
 						"type": "text/javascript",
+						"requests": {},
 						"exec": [
 							"// Shared password for all user onboarding requests",
 							"const password = \"MMM1234\";",
@@ -443,7 +448,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "30484714-a114-4031-a6a9-a5aea10a3d26",
+						"id": "221802f2-9e4e-44a8-9030-9065e9174480",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
