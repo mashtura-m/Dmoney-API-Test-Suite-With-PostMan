@@ -441,32 +441,11 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "2ad5af96-1f51-401c-8b8b-d1c16fe2e1ca",
+						"id": "acd2e6f3-c944-48f4-934a-4d805d8cc182",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
 						"exec": [
-							"// 1. Generate Random Name",
-							"const name = \"{{$randomFullName}}\";",
-							"",
-							"// 2. Generate Random Email",
-							"const email = \"{{$randomEmail}}\"",
-							"",
-							"// 3. Generate Random Password",
-							"const password = _.sampleSize('abcdefghijklmnopqrstuvwxyz0123456789', 4).join('');",
-							"",
-							"// 4. Generate 11-Digit Phone Number (Starts with 01, then 9 random digits)",
-							"const phoneNumber = \"01\" + _.times(9, () => _.random(0, 9)).join('');",
-							"",
-							"// 5. Generate NID (Within 13 characters)",
-							"const nid = _.times(13, () => _.random(0, 9)).join('');",
-							"",
-							"// 6. Define role for this request",
-							"const role = \"Agent\";",
-							"",
-							"// 7. Save Phone Number to local variables for further tests",
-							"pm.variables.set(\"random_phone\", phoneNumber);",
-							"pm.variables.set(\"random_role\", role);",
 							""
 						]
 					}
@@ -474,7 +453,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "f66be6af-a229-421b-b0d8-37d09da5c05c",
+						"id": "30484714-a114-4031-a6a9-a5aea10a3d26",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
