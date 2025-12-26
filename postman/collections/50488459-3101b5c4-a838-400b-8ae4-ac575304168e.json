@@ -337,8 +337,22 @@
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "GET",
-								"header": []
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"ABC123\",\n  \"email\": \"xxx@gmail.com\",\n  \"password\": \"1234\", \n  \"phone_number\": \"01234567892\",\n  \"nid\": \"012wert123456\",\n  \"role\": \"Agent\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/user/create",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"user",
+										"create"
+									]
+								}
 							},
 							"response": []
 						}
