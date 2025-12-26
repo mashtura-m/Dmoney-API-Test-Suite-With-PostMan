@@ -478,7 +478,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "9211ed8f-5db1-4b15-82d8-7caccb694e6f",
+						"id": "30e95472-c19a-4b4a-a1ab-b9042107171f",
 						"type": "text/javascript",
 						"requests": {},
 						"exec": [
@@ -487,7 +487,6 @@
 							"pm.variables.set(\"password\", password);",
 							"",
 							"// 1. Retrieve the keys from your variables",
-							"// using 'pm.variables.get' searches Local -> Data -> Env -> Collection -> Global scopes automatically",
 							"const authToken = pm.variables.get(\"auth-token\");",
 							"const secretKey = pm.variables.get(\"auth-secret-key\");",
 							"",
@@ -512,7 +511,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "3e9b240d-fc8f-42e5-913b-a74c96534acf",
+						"id": "0a18d9b3-f352-4c37-acd0-33a2a2c0d09d",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
