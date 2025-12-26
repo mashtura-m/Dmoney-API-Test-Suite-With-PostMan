@@ -526,7 +526,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "97827485-6eea-4440-b426-9a8f1b89ff47",
+						"id": "4b74e8e5-ee56-4c26-a9ff-4c02618f141a",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
@@ -538,7 +538,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "9713cba2-e12e-4869-b6ea-661372b209a6",
+						"id": "920de51a-a11d-40b5-a05c-7ada3b9bac6f",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
@@ -546,7 +546,7 @@
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(201);",
 							"});",
-							"pm.test(\"Login successfully\", function () {",
+							"pm.test(\"Deposit successfully\", function () {",
 							"    pm.expect(pm.response.text()).contains(\"Deposit\");",
 							"});",
 							""
