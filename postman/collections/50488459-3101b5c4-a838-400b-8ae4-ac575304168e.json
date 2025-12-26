@@ -173,9 +173,13 @@
 											"const role = \"Agent\";",
 											"",
 											"// 7. Save Phone Number to local variables for further tests",
-											"pm.variables.set(\"random_phone\", phoneNumber);",
-											"pm.variables.set(\"random_role\", role);",
-											""
+											"// 7. Save values to variables used in the request body",
+											"pm.variables.set(\"name\", name);",
+											"pm.variables.set(\"email\", email);",
+											"pm.variables.set(\"password\", password);",
+											"pm.variables.set(\"phone_number\", phoneNumber);",
+											"pm.variables.set(\"nid\", nid);",
+											"pm.variables.set(\"role\", role);"
 										],
 										"type": "text/javascript",
 										"packages": {},
@@ -231,7 +235,13 @@
 											"",
 											"// 6. Define role for this request",
 											"const role = \"Customer\";",
-											""
+											"// 7. Save values to variables used in the request body",
+											"pm.variables.set(\"name\", name);",
+											"pm.variables.set(\"email\", email);",
+											"pm.variables.set(\"password\", password);",
+											"pm.variables.set(\"phone_number\", phoneNumber);",
+											"pm.variables.set(\"nid\", nid);",
+											"pm.variables.set(\"role\", role);"
 										],
 										"type": "text/javascript",
 										"packages": {},
@@ -285,7 +295,14 @@
 											"const nid = pm.variables.replaceIn(\"{{$randomInt}}\").toString().padStart(7, '0').slice(0, 7) + pm.variables.replaceIn(\"{{$randomInt}}\").toString().padStart(6, '0').slice(0, 6);",
 											"",
 											"// 6. Define role for this request",
-											"const role = \"Customer\";"
+											"const role = \"Customer\";",
+											"// 7. Save values to variables used in the request body",
+											"pm.variables.set(\"name\", name);",
+											"pm.variables.set(\"email\", email);",
+											"pm.variables.set(\"password\", password);",
+											"pm.variables.set(\"phone_number\", phoneNumber);",
+											"pm.variables.set(\"nid\", nid);",
+											"pm.variables.set(\"role\", role);"
 										],
 										"type": "text/javascript",
 										"packages": {},
