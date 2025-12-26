@@ -478,20 +478,41 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "0e5bf500-683c-4945-b15f-e53780dd5edc",
+						"id": "9211ed8f-5db1-4b15-82d8-7caccb694e6f",
 						"type": "text/javascript",
 						"requests": {},
 						"exec": [
 							"// Shared password for all user onboarding requests",
 							"const password = \"MMM1234\";",
-							"pm.variables.set(\"password\", password);"
+							"pm.variables.set(\"password\", password);",
+							"",
+							"// 1. Retrieve the keys from your variables",
+							"// using 'pm.variables.get' searches Local -> Data -> Env -> Collection -> Global scopes automatically",
+							"const authToken = pm.variables.get(\"auth-token\");",
+							"const secretKey = pm.variables.get(\"auth-secret-key\");",
+							"",
+							"// 2. Check if keys exist, then inject them into the header",
+							"if (authToken) {",
+							"    // Note: Adjust \"Authorization\" to \"auth-token\" if your API uses that specific header key",
+							"    pm.request.headers.add({",
+							"        key: 'Authorization',",
+							"        value: `Bearer ${authToken}` // Common standard. Remove 'Bearer ' if your API just sends the raw token.",
+							"    });",
+							"}",
+							"",
+							"if (secretKey) {",
+							"    pm.request.headers.add({",
+							"        key: 'X-AUTH-SECRET-KEY',",
+							"        value: secretKey",
+							"    });",
+							"}"
 						]
 					}
 				},
 				{
 					"listen": "test",
 					"script": {
-						"id": "abe945ff-28c1-4132-8d6e-27b0d9b2e27a",
+						"id": "3e9b240d-fc8f-42e5-913b-a74c96534acf",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
