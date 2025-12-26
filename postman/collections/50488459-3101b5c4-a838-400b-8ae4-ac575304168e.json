@@ -535,7 +535,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "f3f0ee97-df39-4776-ba7b-39d669612384",
+						"id": "4df0ef23-1672-4d3f-a8f5-e3002b111047",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
@@ -558,14 +558,15 @@
 							"        value: secretKey",
 							"    });",
 							"}",
-							"console.log('Headers injected via Collection Script ${authToken}');"
+							"console.log('Headers injected via Collection Script ${authToken}');",
+							""
 						]
 					}
 				},
 				{
 					"listen": "test",
 					"script": {
-						"id": "3f6bfed4-3dff-479b-af35-4200b8d94437",
+						"id": "7f088c68-520e-40a4-adbb-7388ade1026f",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
