@@ -392,6 +392,38 @@
 			"item": [
 				{
 					"name": "System to Agent Deposit",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "668202ab-b5ca-43bd-8c15-968e1ddf4b6c",
+								"exec": [
+									"const authToken = pm.variables.get(\"Agent-auth-token\");",
+									"const secretKey = pm.variables.get(\"secret-key\");",
+									"",
+									"// 2. Check if keys exist, then inject them into the header",
+									"if (authToken) {",
+									"    // Note: Adjust \"Authorization\" to \"auth-token\" if your API uses that specific header key",
+									"    pm.request.headers.add({",
+									"        key: 'Authorization',",
+									"        value: `Bearer ${authToken}` // Common standard. Remove 'Bearer ' if your API just sends the raw token.",
+									"    });",
+									"}",
+									"",
+									"if (secretKey) {",
+									"    pm.request.headers.add({",
+									"        key: 'X-AUTH-SECRET-KEY',",
+									"        value: secretKey",
+									"    });",
+									"}",
+									"console.log('Headers injected via Collection Script ${authToken}');"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
 					"id": "50488459-dcba282a-2f7c-403f-a28f-977e2e8ef7b3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
