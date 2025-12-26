@@ -429,13 +429,20 @@
 			"id": "50488459-c723f8de-51b0-4542-a005-24503b40438a",
 			"description": "Admin creating Agent, Customers, and Merchant.",
 			"auth": {
-				"type": "bearer"
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{Admin-auth-token}}",
+						"type": "string"
+					}
+				]
 			},
 			"event": [
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "f1a3a758-4f80-4305-80ef-87486e3421d7",
+						"id": "0e5bf500-683c-4945-b15f-e53780dd5edc",
 						"type": "text/javascript",
 						"requests": {},
 						"exec": [
@@ -448,7 +455,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "221802f2-9e4e-44a8-9030-9065e9174480",
+						"id": "abe945ff-28c1-4132-8d6e-27b0d9b2e27a",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
