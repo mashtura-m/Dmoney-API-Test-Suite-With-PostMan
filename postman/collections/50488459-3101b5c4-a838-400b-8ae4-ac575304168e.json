@@ -28,7 +28,7 @@
 									"        console.log(\"ROLE: \"+role)",
 									"        let auth_token=role+\"-auth-token\"",
 									"        pm.collectionVariables.set(auth_token, jsonData.token);",
-									"        console.log(\"Success: Token saved to collection variable 'auth-token'\");",
+									"        console.log(\"Success: Token saved to collection variable 'role-auth-token'\"+PM.auth_token);",
 									"    } else {",
 									"        console.log(\"Error: Token field not found in response body\");",
 									"    }",
