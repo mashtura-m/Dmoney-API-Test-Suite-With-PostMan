@@ -598,7 +598,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "1b0273b3-233c-413b-b885-67fdf1910998",
+				"id": "6c57531b-7901-49ae-85a8-9dcc06519565",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
@@ -614,12 +614,30 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "5938940d-cc42-4423-9ba5-dcddefa806c6",
+				"id": "fec5c4a9-09f0-41c5-b07c-25632acd0e3c",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
 				"exec": [
-					""
+					"const authToken = pm.variables.get(\"Admin-auth-token\");",
+					"const secretKey = pm.variables.get(\"secret-key\");",
+					"",
+					"// 2. Check if keys exist, then inject them into the header",
+					"if (authToken) {",
+					"    // Note: Adjust \"Authorization\" to \"auth-token\" if your API uses that specific header key",
+					"    pm.request.headers.add({",
+					"        key: 'Authorization',",
+					"        value: `Bearer ${authToken}` // Common standard. Remove 'Bearer ' if your API just sends the raw token.",
+					"    });",
+					"}",
+					"",
+					"if (secretKey) {",
+					"    pm.request.headers.add({",
+					"        key: 'X-AUTH-SECRET-KEY',",
+					"        value: secretKey",
+					"    });",
+					"}",
+					"console.log('Headers injected via Collection Script ${authToken}');"
 				]
 			}
 		}
