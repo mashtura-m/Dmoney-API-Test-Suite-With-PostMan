@@ -753,6 +753,11 @@
 			],
 			"id": "50488459-681ba7e7-35fc-4b57-a172-61adbd531e44",
 			"description": "Balance checks and transaction history."
+		},
+		{
+			"name": "New Folder",
+			"item": [],
+			"id": "50488459-5b734fdd-4fc6-4ace-a51c-cf6aaeac0c78"
 		}
 	],
 	"event": [
