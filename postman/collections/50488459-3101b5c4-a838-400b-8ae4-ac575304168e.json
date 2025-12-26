@@ -196,7 +196,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"name\": \"{{name}}\",\n  \"email\": \"{{email}}\",\n  \"password\": \"{{user-password}}\",\n  \"phone_number\": \"{{phone_number}}\",\n  \"nid\": \"{{nid}}\",\n  \"role\": \"{{new_role}}\"\n}"
+									"raw": "{\n  \"name\": \"{{name}}\",\n  \"email\": \"{{email}}\",\n  \"password\": \"{{user-password}}\", \n  \"phone_number\": \"{{phone_number}}\",\n  \"nid\": \"{{nid}}\",\n  \"role\": \"{{new_role}}\"\n}"
 								},
 								"url": {
 									"raw": "{{baseUrl}}/user/create",
