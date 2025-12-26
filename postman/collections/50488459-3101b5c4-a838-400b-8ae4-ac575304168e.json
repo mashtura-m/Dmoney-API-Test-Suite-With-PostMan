@@ -36,20 +36,41 @@
 					"response": []
 				},
 				{
-					"name": "login as admin Copy",
+					"name": "Admin Login - Valid Creds",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
 								"id": "b405e134-e41d-4c78-92fc-d3b01bd34fec",
 								"exec": [
+									"",
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
 									"});",
 									"pm.test(\"Login successfully\", function () {",
 									"    pm.expect(pm.response.text()).contains(\"Login successful\");",
 									"});",
-									""
+									"",
+									"",
+									"",
+									"if (pm.response.code === 200) {",
+									"    ",
+									"    // 2. Parse the JSON response",
+									"    var jsonData = pm.response.json();",
+									"",
+									"    // 3. Extract the token and save it to Collection Variables",
+									"    if (jsonData.token) {",
+									"        let role=jsonData.role",
+									"        let auth_token=role+\"-auth-token\"",
+									"        pm.collectionVariables.set(auth_token, jsonData.token);",
+									"        console.log(\"Success: Token saved to collection variable 'auth-token'\");",
+									"    } else {",
+									"        console.log(\"Error: Token field not found in response body\");",
+									"    }",
+									"",
+									"} else {",
+									"    console.log(\"Login failed. Status code: \" + pm.response.code);",
+									"}"
 								],
 								"type": "text/javascript",
 								"packages": {},
