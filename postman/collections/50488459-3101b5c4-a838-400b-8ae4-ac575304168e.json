@@ -464,7 +464,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"from_account\": \"Agent\",\n  \"to_account\": \"01774390346\",\n  \"amount\": 2000\n}",
+							"raw": "{\n  \"from_account\": \"01223334442\",\n  \"to_account\": \"01771665896\",\n  \"amount\": 2000\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -535,7 +535,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "e11496d1-e06f-4317-9fc0-6d74f51d4f8c",
+						"id": "17fde120-6a35-487c-9be3-d54e69d80ccc",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
@@ -568,12 +568,12 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "50fb73ba-661a-48b5-8e0a-e14a68d502af",
+						"id": "45e3c7d9-0b55-47ad-ad1d-3367585e14bb",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
+							"pm.test(\"Status code is 201\", function () {",
 							"    pm.response.to.have.status(201);",
 							"});",
 							"pm.test(\"Deposit successfully\", function () {",
