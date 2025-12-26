@@ -178,7 +178,7 @@
 											"pm.variables.set(\"new_role\", role);",
 											"",
 											"// Debugging: Print to console to verify",
-											"console.log(`Generated User: ${name} | Phone: ${phoneNumber} | Role: ${role}`);"
+											"console.log(`Generated User: ${name} | NID: ${nid}| Phone: ${phoneNumber} | Role: ${role}`);"
 										],
 										"type": "text/javascript",
 										"packages": {},
