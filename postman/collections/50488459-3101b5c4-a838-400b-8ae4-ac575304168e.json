@@ -149,6 +149,39 @@
 					"item": [
 						{
 							"name": "Create Agent",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "0a6b81e7-f106-41e9-901b-043ea35dd543",
+										"exec": [
+											"// 1. Generate Random Name",
+											"const name = `${_.random(1000, 9999)}`;",
+											"",
+											"// 2. Generate Random Email",
+											"const email = `${_.toLower(name)}@example.com`;",
+											"",
+											"// 3. Generate Random Password",
+											"const password = _.sampleSize('abcdefghijklmnopqrstuvwxyz0123456789', 4).join('');",
+											"",
+											"// 4. Generate 11-Digit Phone Number (Starts with 01, then 9 random digits)",
+											"const phoneNumber = \"01\" + _.times(9, () => _.random(0, 9)).join('');",
+											"",
+											"// 5. Generate NID (Within 13 characters)",
+											"const nid = _.times(13, () => _.random(0, 9)).join('');",
+											"",
+											"// 7. Save Phone Number to local variables for further tests",
+											"pm.variables.set(\"random_phone\", phoneNumber);",
+											"pm.variables.set(\"random_role\", role);",
+											"",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								}
+							],
 							"id": "50488459-b5fb8bf4-8600-48ff-927a-f8c9a0154eab",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -158,7 +191,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\"role\": \"Agent\", ...}"
+									"raw": "{\n  \"name\": \"{{name}}\",\n  \"email\": \"{{email}}\",\n  \"password\": \"{{password}}\",\n  \"phone_number\": \"{{phone_number}}\",\n  \"nid\": \"{{nid}}\",\n  \"role\": \"Agent\"\n}"
 								},
 								"url": {
 									"raw": "{{baseUrl}}/user/create",
