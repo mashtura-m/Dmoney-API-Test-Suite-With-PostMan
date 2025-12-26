@@ -331,7 +331,7 @@
 							"response": []
 						},
 						{
-							"name": "New Request",
+							"name": "Create Random User",
 							"id": "50488459-b8e6c979-f774-4ea0-855b-24c1c9bd30a6",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
