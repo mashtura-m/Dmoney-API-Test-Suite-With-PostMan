@@ -535,7 +535,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "f86b23e4-fb3e-46dc-a7cf-89bb917086d9",
+						"id": "e11496d1-e06f-4317-9fc0-6d74f51d4f8c",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
@@ -560,7 +560,7 @@
 							"}",
 							"console.log('Headers injected via Collection Script ${authToken}');",
 							"",
-							"// Retrieve data for transa",
+							"// Retrieve data for transaction",
 							""
 						]
 					}
@@ -568,7 +568,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "5d4390af-2cce-4725-b642-5a963a2ed31c",
+						"id": "50fb73ba-661a-48b5-8e0a-e14a68d502af",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
