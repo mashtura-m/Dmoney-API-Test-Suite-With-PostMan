@@ -178,7 +178,7 @@
 											"pm.variables.set(\"email\", email);",
 											"pm.variables.set(\"phone_number\", phoneNumber);",
 											"pm.variables.set(\"nid\", nid);",
-											"pm.variables.set(\"role\", role);"
+											"pm.variables.set(\"new_role\", role);"
 										],
 										"type": "text/javascript",
 										"packages": {},
@@ -195,7 +195,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"name\": \"{{name}}\",\n  \"email\": \"{{email}}\",\n  \"password\": \"{{user-password}}\",\n  \"phone_number\": \"{{phone_number}}\",\n  \"nid\": \"{{nid}}\",\n  \"role\": \"{{role}}\"\n}"
+									"raw": "{\n  \"name\": \"{{name}}\",\n  \"email\": \"{{email}}\",\n  \"password\": \"{{user-password}}\",\n  \"phone_number\": \"{{phone_number}}\",\n  \"nid\": \"{{nid}}\",\n  \"role\": \"{{new_role}}\"\n}"
 								},
 								"url": {
 									"raw": "{{baseUrl}}/user/create",
