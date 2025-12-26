@@ -159,7 +159,7 @@
 											"const name = `${_.random(1000, 9999)}`;",
 											"",
 											"// 2. Generate Random Email",
-											"const email = `${_.toLower(name)}@example.com`;",
+											"const email = \"{{randonEmail}}\"",
 											"",
 											"// 3. Generate Random Password",
 											"const password = _.sampleSize('abcdefghijklmnopqrstuvwxyz0123456789', 4).join('');",
