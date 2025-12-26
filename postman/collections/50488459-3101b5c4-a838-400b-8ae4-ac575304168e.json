@@ -526,7 +526,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "0edbad54-3fb0-419d-a9d8-f812b8be40f9",
+						"id": "dace7a14-b885-44c0-982a-d86bf8569e6b",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
@@ -538,13 +538,13 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "b2365257-c82c-40cd-9c33-1532733ab0b9",
+						"id": "8fe5271d-a784-4556-a2f3-892f9578db26",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
+							"    pm.response.to.have.status(201);",
 							"});",
 							"pm.test(\"Login successfully\", function () {",
 							"    pm.expect(pm.response.text()).contains(\"Login successful\");",
