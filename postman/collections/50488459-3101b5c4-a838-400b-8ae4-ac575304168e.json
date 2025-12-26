@@ -462,6 +462,15 @@
 					"request": {
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"from_account\": \"Agent\",\n  \"to_account\": \"01774390346\",\n  \"amount\": 2000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "{{baseUrl}}/transaction/deposit",
 							"host": [
