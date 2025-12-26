@@ -109,7 +109,39 @@
 				}
 			],
 			"id": "50488459-6cabae78-fab7-452d-8140-94b83848c52b",
-			"description": "Handles Admin login and token retrieval."
+			"description": "Handles Admin login and token retrieval.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "362ada38-7370-472b-9997-d9dbcb358e2f",
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "824d5528-bdef-4572-aad9-e5dba1d18d58",
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Login successfully\", function () {",
+							"    pm.expect(pm.response.text()).contains(\"Login successful\");",
+							"});",
+							""
+						]
+					}
+				}
+			]
 		},
 		{
 			"name": "02. User Onboarding",
