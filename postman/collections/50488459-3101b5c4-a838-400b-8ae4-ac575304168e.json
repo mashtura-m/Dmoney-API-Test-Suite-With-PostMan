@@ -526,7 +526,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "4b74e8e5-ee56-4c26-a9ff-4c02618f141a",
+						"id": "f2936d92-5ae0-4317-a9b2-5cdbae65b786",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
@@ -538,7 +538,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "920de51a-a11d-40b5-a05c-7ada3b9bac6f",
+						"id": "76c316fd-bf2c-4269-9705-a19beb4a7295",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
@@ -547,7 +547,7 @@
 							"    pm.response.to.have.status(201);",
 							"});",
 							"pm.test(\"Deposit successfully\", function () {",
-							"    pm.expect(pm.response.text()).contains(\"Deposit\");",
+							"    pm.expect(pm.response.text()).contains(\"successful\");",
 							"});",
 							""
 						]
