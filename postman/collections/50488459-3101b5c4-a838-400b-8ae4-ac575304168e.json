@@ -359,7 +359,6 @@
 											"// 7. Save values to variables used in the request body",
 											"pm.variables.set(\"name\", name);",
 											"pm.variables.set(\"email\", email);",
-											"pm.variables.set(\"password\", password);",
 											"pm.variables.set(\"phone_number\", phoneNumber);",
 											"pm.variables.set(\"nid\", nid);",
 											"pm.variables.set(\"role\", role);"
