@@ -213,14 +213,13 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "a10f177b-5a5e-4b70-8a07-6c8dca3eea2f",
+										"type": "text/javascript",
 										"exec": [
 											"// 1. Generate Random Name",
-											"const _ = require('lodash');",
 											"const name = \"{{$randomFullName}}\";",
 											"",
 											"// 2. Generate Random Email",
-											"const email = \"{{$randonEmail}}\"",
+											"const email = \"{{$randomEmail}}\"",
 											"",
 											"// 3. Generate Random Password",
 											"const password = _.sampleSize('abcdefghijklmnopqrstuvwxyz0123456789', 4).join('');",
@@ -231,15 +230,14 @@
 											"// 5. Generate NID (Within 13 characters)",
 											"const nid = _.times(13, () => _.random(0, 9)).join('');",
 											"",
+											"// 6. Define role for this request",
+											"const role = \"Customer\";",
+											"",
 											"// 7. Save Phone Number to local variables for further tests",
 											"pm.variables.set(\"random_phone\", phoneNumber);",
 											"pm.variables.set(\"random_role\", role);",
-											"",
 											""
-										],
-										"type": "text/javascript",
-										"packages": {},
-										"requests": {}
+										]
 									}
 								}
 							],
@@ -273,14 +271,13 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "791e0fed-9ad1-429e-97c3-1ba2d5e5e7ee",
+										"type": "text/javascript",
 										"exec": [
 											"// 1. Generate Random Name",
-											"const _ = require('lodash');",
 											"const name = \"{{$randomFullName}}\";",
 											"",
 											"// 2. Generate Random Email",
-											"const email = \"{{$randonEmail}}\"",
+											"const email = \"{{$randomEmail}}\"",
 											"",
 											"// 3. Generate Random Password",
 											"const password = _.sampleSize('abcdefghijklmnopqrstuvwxyz0123456789', 4).join('');",
@@ -291,15 +288,14 @@
 											"// 5. Generate NID (Within 13 characters)",
 											"const nid = _.times(13, () => _.random(0, 9)).join('');",
 											"",
+											"// 6. Define role for this request",
+											"const role = \"Customer\";",
+											"",
 											"// 7. Save Phone Number to local variables for further tests",
 											"pm.variables.set(\"random_phone\", phoneNumber);",
 											"pm.variables.set(\"random_role\", role);",
-											"",
 											""
-										],
-										"type": "text/javascript",
-										"packages": {},
-										"requests": {}
+										]
 									}
 								}
 							],
