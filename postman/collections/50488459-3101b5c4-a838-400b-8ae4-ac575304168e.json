@@ -216,10 +216,11 @@
 										"id": "a10f177b-5a5e-4b70-8a07-6c8dca3eea2f",
 										"exec": [
 											"// 1. Generate Random Name",
-											"const name = `User_${_.random(1000, 9999)}`;",
+											"const _ = require('lodash');",
+											"const name = \"{{$randomFullName}}\";",
 											"",
 											"// 2. Generate Random Email",
-											"const email = `${_.toLower(name)}@example.com`;",
+											"const email = \"{{$randonEmail}}\"",
 											"",
 											"// 3. Generate Random Password",
 											"const password = _.sampleSize('abcdefghijklmnopqrstuvwxyz0123456789', 4).join('');",
@@ -232,7 +233,9 @@
 											"",
 											"// 7. Save Phone Number to local variables for further tests",
 											"pm.variables.set(\"random_phone\", phoneNumber);",
-											"pm.variables.set(\"random_role\", role);"
+											"pm.variables.set(\"random_role\", role);",
+											"",
+											""
 										],
 										"type": "text/javascript",
 										"packages": {},
@@ -273,10 +276,11 @@
 										"id": "791e0fed-9ad1-429e-97c3-1ba2d5e5e7ee",
 										"exec": [
 											"// 1. Generate Random Name",
-											"const name = `User_${_.random(1000, 9999)}`;",
+											"const _ = require('lodash');",
+											"const name = \"{{$randomFullName}}\";",
 											"",
 											"// 2. Generate Random Email",
-											"const email = `${_.toLower(name)}@example.com`;",
+											"const email = \"{{$randonEmail}}\"",
 											"",
 											"// 3. Generate Random Password",
 											"const password = _.sampleSize('abcdefghijklmnopqrstuvwxyz0123456789', 4).join('');",
@@ -289,7 +293,9 @@
 											"",
 											"// 7. Save Phone Number to local variables for further tests",
 											"pm.variables.set(\"random_phone\", phoneNumber);",
-											"pm.variables.set(\"random_role\", role);"
+											"pm.variables.set(\"random_role\", role);",
+											"",
+											""
 										],
 										"type": "text/javascript",
 										"packages": {},
@@ -330,10 +336,11 @@
 										"id": "9a463ad9-0f9d-46d7-8b67-85eb738148eb",
 										"exec": [
 											"// 1. Generate Random Name",
-											"const name = `User_${_.random(1000, 9999)}`;",
+											"const _ = require('lodash');",
+											"const name = \"{{$randomFullName}}\";",
 											"",
 											"// 2. Generate Random Email",
-											"const email = `${_.toLower(name)}@example.com`;",
+											"const email = \"{{$randonEmail}}\"",
 											"",
 											"// 3. Generate Random Password",
 											"const password = _.sampleSize('abcdefghijklmnopqrstuvwxyz0123456789', 4).join('');",
@@ -346,7 +353,9 @@
 											"",
 											"// 7. Save Phone Number to local variables for further tests",
 											"pm.variables.set(\"random_phone\", phoneNumber);",
-											"pm.variables.set(\"random_role\", role);"
+											"pm.variables.set(\"random_role\", role);",
+											"",
+											""
 										],
 										"type": "text/javascript",
 										"packages": {},
