@@ -315,7 +315,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"name\": \"MMM-ABC\",\n  \"email\": \"abc@mail.com\",\n  \"password\": \"1234\", \n  \"phone_number\": \"01245612345\",\n  \"nid\": \"abc1234\",\n  \"role\": \"merchant\"\n}"
+									"raw": "{\n  \"name\": \"MMM-ABC\",\n  \"email\": \"abc@mail.com\",\n  \"password\": \"1234\", \n  \"phone_number\": \"01755284705\",\n  \"nid\": \"abc1234\",\n  \"role\": \"merchant\"\n}"
 								},
 								"url": {
 									"raw": "{{baseUrl}}/user/create",
