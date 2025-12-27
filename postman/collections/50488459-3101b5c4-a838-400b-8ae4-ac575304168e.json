@@ -306,12 +306,14 @@
 									{
 										"key": "X-AUTH-SECRET-KEY",
 										"value": "{{secret-key}}",
-										"type": "text"
+										"type": "text",
+										"disabled": true
 									},
 									{
 										"key": "Authorization",
 										"value": "bearer {{Admin-auth-token}}",
-										"type": "text"
+										"type": "text",
+										"disabled": true
 									}
 								],
 								"body": {
@@ -390,12 +392,14 @@
 									{
 										"key": "X-AUTH-SECRET-KEY",
 										"value": "{{secret-key}}",
-										"type": "text"
+										"type": "text",
+										"disabled": true
 									},
 									{
 										"key": "Authorization",
 										"value": "bearer {{Admin-auth-token}}",
-										"type": "text"
+										"type": "text",
+										"disabled": true
 									}
 								],
 								"body": {
@@ -474,12 +478,14 @@
 									{
 										"key": "X-AUTH-SECRET-KEY",
 										"value": "{{secret-key}}",
-										"type": "text"
+										"type": "text",
+										"disabled": true
 									},
 									{
 										"key": "Authorization",
 										"value": "bearer {{Admin-auth-token}}",
-										"type": "text"
+										"type": "text",
+										"disabled": true
 									}
 								],
 								"body": {
