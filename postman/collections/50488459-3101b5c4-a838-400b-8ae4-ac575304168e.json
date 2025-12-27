@@ -778,7 +778,52 @@
 				}
 			],
 			"id": "50488459-681ba7e7-35fc-4b57-a172-61adbd531e44",
-			"description": "Balance checks and transaction history."
+			"description": "Balance checks and transaction history.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1b03baf5-cec1-4c27-9774-775249ccede7",
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							"// 1. Retrieve the keys from variables",
+							"const authToken = pm.variables.get(\"Admin-auth-token\");",
+							"const secretKey = pm.variables.get(\"secret-key\");",
+							"",
+							"// 2. Check if keys exist, then inject them into the header",
+							"if (authToken) {",
+							"    // Note: Adjust \"Authorization\" to \"auth-token\" if your API uses that specific header key",
+							"    pm.request.headers.add({",
+							"        key: 'Authorization',",
+							"        value: `Bearer ${authToken}` // Common standard. Remove 'Bearer ' if your API just sends the raw token.",
+							"    });",
+							"}",
+							"",
+							"if (secretKey) {",
+							"    pm.request.headers.add({",
+							"        key: 'X-AUTH-SECRET-KEY',",
+							"        value: secretKey",
+							"    });",
+							"}",
+							"console.log('Headers injected via Collection Script ${authToken}');"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "c2e663c2-f685-4f60-a9aa-edec0ccde390",
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
 		},
 		{
 			"name": "Search Data",
