@@ -1013,6 +1013,11 @@
 			"key": "customerPhone",
 			"value": "",
 			"type": "default"
+		},
+		{
+			"key": "trnxId",
+			"value": "",
+			"type": "default"
 		}
 	]
 }
