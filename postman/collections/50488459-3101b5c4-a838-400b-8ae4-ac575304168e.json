@@ -856,6 +856,33 @@
 					"response": []
 				},
 				{
+					"name": "search Customer",
+					"id": "50488459-92acb5ba-bc63-4e35-b465-60f1d5ed5088",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseUrl}}/user/search/agent",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"search",
+								"agent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "trxn search",
 					"id": "50488459-c1244a70-db35-4247-b54e-14bbe13a0638",
 					"protocolProfileBehavior": {
