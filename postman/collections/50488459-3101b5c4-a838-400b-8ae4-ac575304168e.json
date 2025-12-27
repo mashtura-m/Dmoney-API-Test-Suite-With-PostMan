@@ -604,6 +604,20 @@
 			"item": [
 				{
 					"name": "Customer Withdrawal to Agent",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "57070807-f3fa-4d81-8b91-00f52c4e7a08",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
 					"id": "50488459-6b889d4b-8f97-4f99-b110-f1e9638137e5",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
