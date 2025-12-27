@@ -1,6 +1,5 @@
 # Dmoney-API-Test-Suite-With-PostMan
 
-```markdown
 # Dmoney-API-Test-Suite-With-PostMan
 
 This project performs automated API testing on the **DMoney** financial application. It utilizes **Postman** for test script creation and **Newman** for command-line execution, generating comprehensive HTML reports to visualize test results.
@@ -20,8 +19,8 @@ This project performs automated API testing on the **DMoney** financial applicat
 ├── LICENSE               # License file
 └── README.md             # Project documentation
 
-```
 
+```
 ## 🚀 Prerequisites
 
 1. **Node.js**: Ensure Node.js is installed. [Download here](https://nodejs.org/).
