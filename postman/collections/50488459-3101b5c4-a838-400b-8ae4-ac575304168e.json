@@ -922,6 +922,11 @@
 		{
 			"key": "Agent-auth-token",
 			"value": ""
+		},
+		{
+			"key": "agentPhone",
+			"value": "",
+			"type": "default"
 		}
 	]
 }
