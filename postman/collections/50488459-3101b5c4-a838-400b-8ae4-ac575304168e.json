@@ -679,7 +679,52 @@
 				}
 			],
 			"id": "50488459-a0247881-137c-49ef-82a5-415c9f1191aa",
-			"description": "Withdrawals and Merchant payments."
+			"description": "Withdrawals and Merchant payments.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "3b643359-4a1b-4fcf-82f4-49f386a10a29",
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							"const authToken = pm.variables.get(\"Agent-auth-token\");",
+							"const secretKey = pm.variables.get(\"secret-key\");",
+							"",
+							"// 2. Check if keys exist, then inject them into the header",
+							"if (authToken) {",
+							"    // Note: Adjust \"Authorization\" to \"auth-token\" if your API uses that specific header key",
+							"    pm.request.headers.add({",
+							"        key: 'Authorization',",
+							"        value: `Bearer ${authToken}` // Common standard. Remove 'Bearer ' if your API just sends the raw token.",
+							"    });",
+							"}",
+							"",
+							"if (secretKey) {",
+							"    pm.request.headers.add({",
+							"        key: 'X-AUTH-SECRET-KEY',",
+							"        value: secretKey",
+							"    });",
+							"}",
+							"console.log('Headers injected via Collection Script ${authToken}');",
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "b3d20d04-c096-4650-a619-3cb5633cb9a9",
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
 		},
 		{
 			"name": "05. Inquiries & Auditing",
