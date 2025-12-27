@@ -853,7 +853,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "8979df32-4bf8-46a9-ab45-a0ab93d09486",
+				"id": "5ed3af88-77b5-46c5-9136-893f61c6f92f",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
@@ -862,14 +862,17 @@
 					"pm.collectionVariables.set('baseUrl',\"https://dmoney.roadtocareer.net\")",
 					"pm.collectionVariables.set('systemEmail',\"system@dmoney.com\")",
 					"pm.collectionVariables.set('adminEmail',\"admin@dmoney.com\")",
-					"pm.collectionVariables.set('pswd',\"1234\")"
+					"pm.collectionVariables.set('pswd',\"1234\")",
+					"// Shared password for all user onboarding requests",
+					"const password = \"MMM1234\";",
+					"pm.variables.set(\"user-password\", password);"
 				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
-				"id": "4adf817d-bfd6-4282-bbe6-ccfec871fb20",
+				"id": "04ca757d-6099-4079-8169-b488170915ff",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
