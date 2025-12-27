@@ -73,7 +73,7 @@ npx newman run ./postman/collections/collection.json -e ./postman/collections/en
 
 | Document | Description | Link |
 | --- | --- | --- |
-| **API Documentation** | Detailed API endpoints and usage | [View API Documentation](https://www.google.com/search?q=PASTE_POSTMAN_DOCS_URL_HERE) |
+| **API Documentation** | Detailed API endpoints and usage | [View API Documentation](https://dmoney.roadtocareer.net/api-docs/transaction/#/default) |
 | **Test Cases** | Standard test scenarios (Excel/Sheet) | [View Test Cases](https://docs.google.com/spreadsheets/d/1xqejWlLz_e_FKQiF9ueJ49_bXUmaxwkn/edit?usp=sharing&ouid=117963010490913010434&rtpof=true&sd=true) |
 | **Bug Report** | List of bugs found during testing | [View Bug Report](https://docs.google.com/spreadsheets/d/1ccfOtDja1ZITBTcqcQ0Lutv_aEH2o7BD/edit?usp=sharing&ouid=117963010490913010434&rtpof=true&sd=true) |
 
