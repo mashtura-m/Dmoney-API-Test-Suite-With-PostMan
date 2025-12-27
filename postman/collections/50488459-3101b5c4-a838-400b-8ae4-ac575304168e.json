@@ -1008,6 +1008,11 @@
 			"key": "agentPhone",
 			"value": "",
 			"type": "default"
+		},
+		{
+			"key": "customerPhone",
+			"value": "",
+			"type": "default"
 		}
 	]
 }
