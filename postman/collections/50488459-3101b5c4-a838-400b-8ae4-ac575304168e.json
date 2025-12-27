@@ -429,7 +429,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"from_account\": \"SYSTEM\",\n  \"to_account\": \"01771665896\",\n  \"amount\": 50000\n}",
+							"raw": "{\n  \"from_account\": \"SYSTEM\",\n  \"to_account\": \"01771665896\",\n  \"amount\": 10000\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -613,7 +613,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"from_account\": \"0123456789\",\n  \"to_account\": \"0987654321\",\n  \"amount\": 100\n}",
+							"raw": "{\n  \"from_account\": \"01771665896\",\n  \"to_account\": \"01305187403\",\n  \"amount\": 100\n}",
 							"options": {
 								"raw": {
 									"language": "json"
