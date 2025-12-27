@@ -869,14 +869,14 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{baseUrl}}/user/search/agent",
+							"raw": "{{baseUrl}}/user/search/customer",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
 								"user",
 								"search",
-								"agent"
+								"customer"
 							]
 						}
 					},
