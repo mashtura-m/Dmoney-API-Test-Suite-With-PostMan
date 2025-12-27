@@ -251,6 +251,258 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "Customer",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "8c8cba51-4ba5-448e-ab68-dbada6fd5e3a",
+										"exec": [
+											"// Generate random data",
+											"var randName = pm.variables.replaceIn('{{$randomFullName}}');",
+											"var randEmail = pm.variables.replaceIn('{{$randomEmail}}');",
+											"// Ensure phone is 11 digits starting with 01 (common validation requirement)",
+											"var randPhone = \"0\"+(pm.variables.replaceIn('{{$randomPhoneNumber}}')).replaceAll(\"-\",\"\"); ",
+											"console.log(randPhone)",
+											"// Set them as temporary local variables",
+											"pm.variables.set(\"local_name\", randName);",
+											"pm.variables.set(\"local_email\", randEmail);",
+											"pm.variables.set(\"local_phone\", randPhone);",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "a93df979-0a8d-4501-89e4-7ee9634c2385",
+										"exec": [
+											"pm.test(\"User Created\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.value).to.eql(\"User created\");",
+											"});",
+											"pm.test(\"Status code is 201\", function () {",
+											"    pm.response.to.have.status(201);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								}
+							],
+							"id": "50488459-3f2913da-43df-4a53-85ae-732ab13c8a13",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-AUTH-SECRET-KEY",
+										"value": "{{secret-key}}",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "bearer {{Admin-auth-token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"{{local_name}}\",\n    \"email\": \"{{local_email}}\",\n    \"phone_number\": \"{{local_phone}}\",\n    \"password\":\"4567\",\n    \"nid\": \"012345678910\",\n    \"role\": \"Customer\"\n  }\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/user/create",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"user",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Agent",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "8c8cba51-4ba5-448e-ab68-dbada6fd5e3a",
+										"exec": [
+											"// Generate random data",
+											"var randName = pm.variables.replaceIn('{{$randomFullName}}');",
+											"var randEmail = pm.variables.replaceIn('{{$randomEmail}}');",
+											"// Ensure phone is 11 digits starting with 01 (common validation requirement)",
+											"var randPhone = \"0\"+(pm.variables.replaceIn('{{$randomPhoneNumber}}')).replaceAll(\"-\",\"\"); ",
+											"console.log(randPhone)",
+											"// Set them as temporary local variables",
+											"pm.variables.set(\"local_name\", randName);",
+											"pm.variables.set(\"local_email\", randEmail);",
+											"pm.variables.set(\"local_phone\", randPhone);",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "a93df979-0a8d-4501-89e4-7ee9634c2385",
+										"exec": [
+											"pm.test(\"User Created\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.value).to.eql(\"User created\");",
+											"});",
+											"pm.test(\"Status code is 201\", function () {",
+											"    pm.response.to.have.status(201);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								}
+							],
+							"id": "50488459-df866c0d-d8ea-476e-8f4f-de7a0b21b61a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-AUTH-SECRET-KEY",
+										"value": "{{secret-key}}",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "bearer {{Admin-auth-token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"{{local_name}}\",\n    \"email\": \"{{local_email}}\",\n    \"phone_number\": \"{{local_phone}}\",\n    \"password\":\"4567\",\n    \"nid\": \"012345678910\",\n    \"role\": \"Customer\"\n  }\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/user/create",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"user",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Merchant",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "8c8cba51-4ba5-448e-ab68-dbada6fd5e3a",
+										"exec": [
+											"// Generate random data",
+											"var randName = pm.variables.replaceIn('{{$randomFullName}}');",
+											"var randEmail = pm.variables.replaceIn('{{$randomEmail}}');",
+											"// Ensure phone is 11 digits starting with 01 (common validation requirement)",
+											"var randPhone = \"0\"+(pm.variables.replaceIn('{{$randomPhoneNumber}}')).replaceAll(\"-\",\"\"); ",
+											"console.log(randPhone)",
+											"// Set them as temporary local variables",
+											"pm.variables.set(\"local_name\", randName);",
+											"pm.variables.set(\"local_email\", randEmail);",
+											"pm.variables.set(\"local_phone\", randPhone);",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "a93df979-0a8d-4501-89e4-7ee9634c2385",
+										"exec": [
+											"pm.test(\"User Created\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.value).to.eql(\"User created\");",
+											"});",
+											"pm.test(\"Status code is 201\", function () {",
+											"    pm.response.to.have.status(201);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								}
+							],
+							"id": "50488459-0871dd17-a915-44a7-b8c4-ee4508dd7627",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-AUTH-SECRET-KEY",
+										"value": "{{secret-key}}",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "bearer {{Admin-auth-token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"{{local_name}}\",\n    \"email\": \"{{local_email}}\",\n    \"phone_number\": \"{{local_phone}}\",\n    \"password\":\"4567\",\n    \"nid\": \"012345678910\",\n    \"role\": \"Customer\"\n  }\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/user/create",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"user",
+										"create"
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"id": "50488459-e4f19f25-7ae6-4751-93d6-dc19521b7d60",
