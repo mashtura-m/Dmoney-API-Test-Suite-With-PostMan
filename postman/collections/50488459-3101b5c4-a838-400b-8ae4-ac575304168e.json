@@ -670,7 +670,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"from_account\": \"SYSTEM\",\n  \"to_account\": \"05585882757\",\n  \"amount\": 10000\n}",
+							"raw": "{\n  \"from_account\": \"SYSTEM\",\n  \"to_account\": \"{{agentPhone}}\",\n  \"amount\": 10000\n}",
 							"options": {
 								"raw": {
 									"language": "json"
