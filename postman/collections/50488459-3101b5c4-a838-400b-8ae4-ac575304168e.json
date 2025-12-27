@@ -524,6 +524,15 @@
 					"request": {
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"from_account\": \"01771665896\",\n  \"to_account\": \"01223331124\",\n  \"amount\": 2000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "{{baseUrl}}/transaction/sendmoney",
 							"host": [
