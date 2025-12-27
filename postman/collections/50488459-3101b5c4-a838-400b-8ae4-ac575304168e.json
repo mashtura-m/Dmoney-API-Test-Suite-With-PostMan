@@ -342,14 +342,10 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "86eb0135-0501-405b-87fa-5ee0a35827ed",
+						"id": "2814617e-b24a-4bf4-9a5a-e2b4f8e25f8c",
 						"type": "text/javascript",
 						"requests": {},
 						"exec": [
-							"// Shared password for all user onboarding requests",
-							"const password = \"MMM1234\";",
-							"pm.variables.set(\"user-password\", password);",
-							"",
 							"// 1. Retrieve the keys from variables",
 							"const authToken = pm.variables.get(\"Admin-auth-token\");",
 							"const secretKey = pm.variables.get(\"secret-key\");",
@@ -376,7 +372,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "3dfcb19b-7791-4dc9-8571-f5d5e833a210",
+						"id": "4a4919e1-7a3c-46b0-8d9c-5afb65c3f5a5",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
