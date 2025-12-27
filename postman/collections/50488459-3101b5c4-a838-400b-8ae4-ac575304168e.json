@@ -678,6 +678,15 @@
 					"request": {
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"from_account\": \"01771665896\",\n  \"to_account\": \"01502838530\",\n  \"amount\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "{{baseUrl}}/transaction/withdraw",
 							"host": [
