@@ -684,7 +684,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "3b643359-4a1b-4fcf-82f4-49f386a10a29",
+						"id": "24bb11cf-20a7-4714-b2d4-f7c636539e49",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
@@ -715,11 +715,17 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "b3d20d04-c096-4650-a619-3cb5633cb9a9",
+						"id": "4cbe8538-2651-4b19-9629-e2c3cb44863a",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
 						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});",
+							"pm.test(\"Widrawl successfully\", function () {",
+							"    pm.expect(pm.response.text()).contains(\"successful\");",
+							"});",
 							""
 						]
 					}
