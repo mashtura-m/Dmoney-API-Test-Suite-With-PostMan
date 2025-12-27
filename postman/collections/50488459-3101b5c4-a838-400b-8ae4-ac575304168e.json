@@ -292,7 +292,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"name\": \"{{local_name}}\",\n    \"email\": \"{{local_email}}\",\n    \"phone_number\": \"{{local_phone}}\",\n    \"password\":\"4567\",\n    \"nid\": \"012345678910\",\n    \"role\": \"Customer\"\n  }\n",
+									"raw": "{\n    \"name\": \"{{local_name}}\",\n    \"email\": \"{{local_email}}\",\n    \"phone_number\": \"{{local_phone}}\",\n    \"password\":\"4567\",\n    \"nid\": \"01234567891\",\n    \"role\": \"Customer\"\n  }\n",
 									"options": {
 										"raw": {
 											"language": "json"
